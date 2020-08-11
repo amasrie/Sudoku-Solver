@@ -79,11 +79,13 @@
         <textarea
           rows="10"
           cols="85"
+          maxlength="81"
+          oninput="addToGrid()"
           id="text-input"
         ></textarea>
         <br />
-        <input type="button" value="Solve" id="solve-button" />
-        <input type="button" value="Clear" id="clear-button" />
+        <input type="button" value="Solve" id="solve-button" onclick="solveButton()"/>
+        <input type="button" value="Clear" id="clear-button" onclick="clearButton()"/>
         <div id="error-msg"></div>
       </div>
       <div id="sudoku-grid">
